@@ -1,7 +1,7 @@
-<h1>Website de Academia</h1>
+<h1>API para lista de tarefas</h1>
 <p>
   O projeto foi desenvolvido com cunho e aprendizagem e evolução principalmente em
-  TypeScript e React. O conteúdo do projeto envolve um website completo com informações de academia.
+  TypeScript e React. O conteúdo do projeto envolve API para lista de tarefas.
 </p>
 
 <h2>Tecnologias</h2>
@@ -11,7 +11,6 @@
   <li>Vite</li>
   <li>HTML</li>
   <li>CSS</li>
-  <li>JavaScript</li>
 </ul>
 
 
