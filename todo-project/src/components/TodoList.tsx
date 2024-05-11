@@ -1,10 +1,11 @@
-import React,{useState} from 'react';
-import TodoType from '../todo';
-import TodoForm from './TodoForm';
-import TodoService from "../TodoService";
-import { FaCheck, FaEdit } from 'react-icons/fa';
-import { GiCancel } from 'react-icons/gi';
-import { RiDeleteBin5Fill } from 'react-icons/ri';
+import React,{useState} from 'react'
+import TodoType from '../todo'
+import TodoForm from './TodoForm'
+import TodoService from "../TodoService"
+import { FaCheck, FaEdit } from 'react-icons/fa'
+import { GiCancel } from 'react-icons/gi'
+import { RiDeleteBin5Fill } from 'react-icons/ri'
+import '../CSS/TodoList.css'
 
 const TodoList: React.FC = () => {
   const [todos, setTodoList] = useState<TodoType[]>(TodoService.getAllTodo())
@@ -44,37 +45,38 @@ const TodoList: React.FC = () => {
   }
 
   return (
-    <div className="todoContainer">
+    <div className="container-todo">
       <div>
         <TodoForm setTodos={setTodoList} />
       </div>
-      <div className="todos">
+      <div className="todo-container">
         {todos.map((todo) => (
           <div className="items" key={todo.id}>
             {editingTodoId === todo.id ? (
               <div className="editText">
                 <input
+                  className='input-edit'
                   type="text"
                   value={editedTodoText}
                   onChange={(e) => setEditedTodoText(e.target.value)}
                   autoFocus={true}
                 />
-                <button onClick={() => handleEditSave(todo.id)}>
+                <button className='btn-style' onClick={() => handleEditSave(todo.id)}>
                   <FaCheck />
                 </button>
-                <button className="cancelBtn" onClick={handleEditCancel}>
-                  <GiCancel />
+                <button className="btn-style" onClick={handleEditCancel}>
+                  <GiCancel/>
                 </button>
               </div>
             ) : (
               <div className="editBtn">
                 <span>{todo.text}</span>
-                <button onClick={() => handleEditStart(todo.id, todo.text)}>
+                <button className='btn-style' onClick={() => handleEditStart(todo.id, todo.text)}>
                   <FaEdit />
                 </button>
               </div>
             )}
-            <button onClick={() => handleEditDelete(todo.id)}>
+            <button className='btn-style' onClick={() => handleEditDelete(todo.id)}>
               <RiDeleteBin5Fill />
             </button>
           </div>

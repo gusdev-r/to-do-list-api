@@ -1,0 +1,68 @@
+/* .container-todo {
+  width: 100%;
+  max-width: 900px; 
+  margin: 0 auto;
+} */
+
+.todo-container {
+  font-size: 14px;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.input-edit {
+  border: none;
+}
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: hsla(0, 0%, 0%, 0.183) 0px 8px 10px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "Inter";
+  transition: all .3s ease-in-out;
+}
+
+.editText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-style {
+  padding: 5px 7px;
+  background-color: hsla(0, 0%, 100%, 0.233);
+  border-radius: 20px;
+  border: none;
+  box-shadow: hsla(0, 0%, 0%, 0.153) 0px 8px 24px;
+  transition: background 1.0s;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.btn-style:hover {
+  background-color: hsla(268, 100%, 62%, 0.17);
+  box-shadow: hsla(0, 0%, 0%, 0.341) 0px 8px 10px;
+}
+
+.editBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 10px;
+}
+
+.editBtn {
+  display: flex;
+  align-items: center;
+}
+
+.items {
+  color: hsl(0, 0%, 100%);
+}
